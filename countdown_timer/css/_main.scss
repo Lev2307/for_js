@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:wght@500;600&display=swap');
+
+body {
+    font-family: 'Besley', serif;
+    overflow-x: hidden;
+}
+.section {
+    background: url('../img/birthday-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    #text {
+        margin-top: 5rem;
+        color: #ffffff;
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 4rem;
+        @include media('<=phone') {
+            font-size: 2.5rem;
+        }
+    }
+    .countdown-cont {
+        margin-top: 4rem;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .days {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .big-text {
+                color: #ffffff;
+                font-size: 5rem;
+                font-weight: 600;
+                @include media('<=phone') {
+                    font-size: 3.5rem;
+                }
+            }
+            span {
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: 300;
+                margin-top: 4px;
+                @include media('<=phone') {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .hours {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 70px;
+            @include media('<=phone') {
+                margin-left: 30px;
+            }
+            .big-text {
+                color: #ffffff;
+                font-size: 5rem;
+                font-weight: 600;
+                @include media('<=phone') {
+                    font-size: 3.5rem;
+                }
+            }
+            span {
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: 300;
+                margin-top: 4px;
+                @include media('<=phone') {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .minutes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 70px;
+            @include media('<=phone') {
+                margin-left: 30px;
+            }
+            .big-text {
+                color: #ffffff;
+                font-size: 5rem;
+                font-weight: 600;
+                @include media('<=phone') {
+                    font-size: 3.5rem;
+                }
+            }
+            span {
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: 300;
+                margin-top: 4px;
+                @include media('<=phone') {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .seconds {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 70px;
+            @include media('<=phone') {
+                margin-left: 30px;
+            }
+            .big-text {
+                color: #ffffff;
+                font-size: 5rem;
+                font-weight: 600;
+                @include media('<=phone') {
+                    font-size: 3.5rem;
+                }
+            }
+            span {
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: 300;
+                margin-top: 4px;
+                @include media('<=phone') {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .emoji {
+        display: none;
+        padding: 1rem;
+        #new_title {
+            margin-top: 5rem;
+            color: #ffffff;
+            font-size: 5rem;
+            font-weight: bold;
+            display: none;
+            text-align: center;
+            @include media('<=phone') {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+        }
+        span {
+            font-size: 4rem;
+            padding: 0 .5rem;
+          }
+    }
+}
