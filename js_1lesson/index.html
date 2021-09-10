@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .line1, .line2 {
+            width: 180px;
+            height: 15px;
+            position: absolute;
+        }
+        .line1 {
+            background-color: rebeccapurple;
+        }
+        .line2 {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 50vh;"></div>
+    <div class="line1"></div>
+    <h1>TEXT</h1>
+    <div class="line2"></div>
+    <div style="height: 50vh;"></div>
+    <script>
+        const lines = document.querySelectorAll('.line1, .line2');
+        let line1 = lines[0]
+        let line2 = lines[1]
+        let postTop = lines[0].offsetTop
+        let postBot = lines[1].offsetTop
+        let size = document.body.clientHeight;
+        let line1_width = line1.offsetWidth;
+        let line1_height = line1.offsetHeight;
+        let line2_width = line1.offsetWidth;
+        let line2_height = line1.offsetHeight;
+        document.addEventListener('scroll', (e) => {
+            let s = window.scrollY;
+            line1.style.width = line1_width + s * 0.5 + 'px';
+            line1.style.height = line1_height + s * 0.5 + 'px';
+            line2.style.width = line2_width + s * 0.75 + 'px';
+            line2.style.heihgt = line2_height + s * 0.75 + 'px';
+            lines[0].style.top = postTop + s * 0.25 + 'px';
+            lines[1].style.top = postBot + s * 1.1 + 'px';
+
+        });
+
+    </script>
+</body>
+</html>
