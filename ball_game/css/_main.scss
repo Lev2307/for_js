@@ -1,0 +1,24 @@
+body {
+    background-color: #ff8a5c;
+    height: 100vh;
+    cursor: none;
+    #ball {
+        background-color: #e9444c;
+        opacity: 0.4;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    #dot {
+        background-color: rgb(255, 11, 11);
+        opacity: 1;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: fixed;
+        
+    }
+}

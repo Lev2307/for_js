@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap');
+
+        // font-family: 'Lato', sans-serif;
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    position: relative;
+    button {
+        background-color: rgb(255, 255, 44);
+        color: black;
+        font-family: 'Lato', sans-serif;
+        font-size: 2em;
+        padding: 1em 1.3em;
+        border: none;
+        border-radius: 10px;
+        transition: 0.1s;
+    }
+    .click {
+        animation: animate 1s linear infinite;
+    }
+    @keyframes animate {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    .heart {
+        background: url('../img/heart.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: del 2s linear infinite;
+        pointer-events: none;
+    }
+    @keyframes del {
+        0% {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -1000%);
+            opacity: 0;
+        }
+    }
+}
